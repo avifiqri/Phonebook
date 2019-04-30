@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @users = User.where('name ilike ?' "%#{params[:search]}%")
       else  
     @users = User.all.paginate(per_page: 3, page: params[:page])
+      end
   end
 
   # GET /users/1
