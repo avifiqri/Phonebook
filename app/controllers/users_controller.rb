@@ -7,8 +7,10 @@ class UsersController < ApplicationController
     if params[:search]
     @users = User.where('name ilike ?' "%#{params[:search]}%")
       else  
-    @users = User.all.paginate(per_page: 3, page: params[:page])
+    @users = User.order(id: :desc)
       end
+      @users = @users.paginate(per_page: 3, page: params[:page])
+
   end
 
   # GET /users/1
