@@ -7,7 +7,12 @@
           <div class= "col-md-3"> 
             <div id="contact">
                     <i class='fas fa-plus' style='font-size:36px'></i>
-                                <%= link_to 'Buat Contact Baru', new_user_path, style: "font-size: 18px" %> 
+                        <%= link_to 'Buat Contact Baru', new_user_path, style: "font-size: 18px" %> 
+                <div class= "form-group">
+                    <%= text_field_tag  :search, nil, class: "form-control", placeholder: "Enter -Your search . . ."%>
+                </div>                        
+                <%= submit_tag 'Searching name', class: "btn btn-primary"%>
+                
 
             </div>       
         </div>

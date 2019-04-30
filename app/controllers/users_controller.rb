@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    if params[:search]
+    @users = User.where('name ilike ?' "%#{params[:search]}%")
+      else  
     @users = User.all.paginate(per_page: 3, page: params[:page])
   end
 
