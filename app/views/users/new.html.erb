@@ -1,0 +1,18 @@
+<div class="form">
+<div class= "container">
+  <div class="row">
+        <div class= "col-md-3"> 
+            <div id="contact">
+<i class='fas fa-home' style='font-size:24px'></i>
+    <%= link_to 'Home', root_path, style: "font-size: 18px" %> </br> 
+
+            </div>       
+        </div>
+          <h3> Buat Contact</h3>
+
+    <div class="col-md-5 col-md-offset-2">
+<%= render 'form', user: @user %>
+</div>
+</div>
+</div>
+</div>

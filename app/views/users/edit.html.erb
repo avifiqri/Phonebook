@@ -1,0 +1,20 @@
+<div class="form">
+
+<div class= "container">
+  <div class="row">
+    <div class= "col-md-3"> 
+            <div id="contact">
+                    <i class='fas fa-undo' style='font-size:24px'></i>
+                                <%= link_to 'Kembali', root_path, style: "font-size: 18px" %> </br> </br>
+            </div>       
+        </div>
+
+          <h3>
+    <i class='fas fa-pen' style='font-size:24px'></i>
+ Edit Contact</h3>
+    <div class="col-md-5 col-md-offset-2">
+<%= render 'form', user: @user %>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<div class ="warm">
+    <div class= "container">
+        <div class ="row">
+
+  <div class= "col-md-3"> 
+            <div id="contact">
+                    <i class='fas fa-undo' style='font-size:24px'></i>
+                                <%= link_to 'Kembali', root_path, style: "font-size: 18px" %> </br> </br>
+
+                    <i class='fas fa-plus' style='font-size:24px'></i>
+                                <%= link_to 'Buat Contact Baru', new_user_path, style: "font-size: 18px" %> 
+
+            </div>       
+        </div>
+
+
+            <div class= "col-md-6 col-md-offset-1 "> 
+              
+                    <h1>Book Phones <i class='fas fa-book' style='font-size:36px'></i></h1>
+            <div class="warming">
+                        
+                         <div class="picture">   <%= image_tag @user.cover.url if @user.cover? %> </div>
+                     <p> Name: </p> <h3><%= @user.name %></h3></br>
+
+                    <p>Umur: </p> <%= @user.age %></br>
+                    <p>Number: </p><%= @user.number %></br>
+                    <p>Alamat: </p><%= @user.address %></br>
+                    <h5>
+                    <i class='fas fa-pen' style='font-size:24px'></i>
+                    <%= link_to 'Edit', edit_user_path(@user) %></h5></br>
+                   <h5> <i class='fas fa-trash-alt' style='font-size:24px'></i>
+                    <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?', disable_with: "<i class='fas fa-life-ring fa-spin' style='font-size:24px'></i>" } %></h5>
+                    </div>
+
+            </div>
+        </div>   
+    </div>
+</div>
