@@ -22,7 +22,9 @@
             <% @users.each do |user| %>
             <div class="warming">
                         
-                         <div class="picture">   <%= image_tag user.cover.url if user.cover? %> </div>
+                         <div class="picture">   
+                         <%= image_tag user.cover.url if user.cover? %>
+                          </div>
                      <p> Name: </p> <h3><%= user.name %></h3></br>
 
                     <p>Umur: </p> <%= user.age %></br>
